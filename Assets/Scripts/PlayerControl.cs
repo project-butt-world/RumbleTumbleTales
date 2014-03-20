@@ -55,10 +55,10 @@ public class PlayerControl : MonoBehaviour
 		// Cache the horizontal input.
 		float h = Input.GetAxis("Horizontal");
 
-		if (Input.GetKeyDown ("space"))
+		if (Input.GetKey ("space"))
 			print ("space key was pressed");
 		
-		anim.SetBool("walk_dammit",true);
+		//anim.SetFloat("walkspeed",1);
 
 
 
