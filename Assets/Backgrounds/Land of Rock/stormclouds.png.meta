@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b55244eb0b7e4a668017d6ffefd8ad4
+guid: ad7df4c202cec49fb8009510b8549323
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -41,23 +41,59 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: amps_0
+    - name: stormclouds_0
       rect:
         serializedVersion: 2
-        x: 339
-        y: 1145
-        width: 678
-        height: 454
+        x: 252
+        y: 59
+        width: 342
+        height: 411
       alignment: 0
       pivot: {x: 0, y: 0}
-    - name: amps_1
+    - name: stormclouds_1
       rect:
         serializedVersion: 2
-        x: 333
-        y: 337
-        width: 677
-        height: 454
+        x: 890
+        y: 77
+        width: 350
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
+    - name: stormclouds_2
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 59
+        width: 343
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: stormclouds_3
+      rect:
+        serializedVersion: 2
+        x: 2211
+        y: 59
+        width: 342
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: stormcloud
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 231
+        width: 343
+        height: 232
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lightening
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 184
+        width: 125
+        height: 226
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
