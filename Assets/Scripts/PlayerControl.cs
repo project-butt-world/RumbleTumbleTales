@@ -16,12 +16,15 @@ public class PlayerControl : MonoBehaviour
 	public AudioClip[] taunts;				// Array of clips for when the player taunts.
 	public float tauntProbability = 50f;	// Chance of a taunt happening.
 	public float tauntDelay = 1f;			// Delay for when the taunt should happen.
+	//public KeyCode moveUp= Input.GetKey("up");
+	//public KeyCode moveDown= Input.GetKey("down");
 
 
 	private int tauntIndex;					// The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;			// A position marking where to check if the player is grounded.
 	//private bool grounded = false;			// Whether or not the player is grounded.
 	private Animator anim;					// Reference to the player's animator component.
+
 
 
 		
@@ -59,6 +62,12 @@ public class PlayerControl : MonoBehaviour
 			print ("space key was pressed");
 		
 		//anim.SetFloat("walkspeed",1);
+		if (Input.GetKey("up"));
+			print ("up");
+
+
+		if (Input.GetKey("down"));
+			print ("down");
 
 
 
