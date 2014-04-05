@@ -34,8 +34,8 @@ public class FollowTouch : TouchLogicV2
 		myTrans.LookAt(finger);
 		
 		//move towards finger if not too close
-		if(Vector3.Distance(finger, myTrans.position) > maxDist)
-			myTrans.Translate (Vector3.forward * speed * Time.deltaTime);
+//		if(Vector3.Distance(finger, myTrans.position) > maxDist)
+//			myTrans.Translate (Vector3.forward * speed * Time.deltaTime);
 	}
 	void OnTouchMovedAnywhere()
 	{
