@@ -28,16 +28,16 @@ public class Puppet2D_IKHandle: MonoBehaviour
 	private bool LargerMiddleJoint;
 
 
-    /*
+    
 	void LateUpdate () 
     {
-		if (!IsEnabled)
-        {
-			return;
-		}
-		CalculateIK();
+//		if (!IsEnabled)
+   //     {
+	//		return;
+//		}
+//		CalculateIK();
 	}
-	*/
+
 	public void CalculateIK()
     {
         int flipRotation;

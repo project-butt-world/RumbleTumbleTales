@@ -15,7 +15,7 @@ public class Puppet2D_GlobalControl : MonoBehaviour {
     public bool BonesVisiblity = true;
 	public bool CombineMeshes = false;
 
-	public bool flip = false;
+	public static bool flip = false;
 	// Use this for initialization
 	void OnEnable () 
     {

@@ -4,52 +4,102 @@ using System.Collections;
 public class PlayerTouch : MonoBehaviour {
 	public Animator anim;
 	public float speed = 0.1F;
-	public GameObject arse; 
-	public bool facingRight = true;	
-	public Transform objToPickUp;
+	KeyCode right;
+	KeyCode left;
+
+//	public GameObject arse; 
+	//public bool facingRight = true;	
+//	public Transform objToPickUp;
+
+
+
 
 	void Start(){
 
-		arse = GameObject.Find("FizzFlip");
-		objToPickUp = this.transform;
+//		arse = GameObject.Find("FizzFlip");
+//		objToPickUp = this.transform;
+		right = Input.GetKey (KeyCode.RightArrow);
+		left = Input.GetKey (KeyCode.LeftArrow);
+	  
+	
+
 
 
 		}
 
 
 	void Update() {
-		if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved) {
-						Vector2 touchDeltaPosition = Input.GetTouch (0).deltaPosition;
-						transform.Translate (-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
-						anim.SetBool ("walk_dammit", true);
+	//	if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved) {
+		//				Vector2 touchDeltaPosition = Input.GetTouch (0).deltaPosition;
+		//				transform.Translate (-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+		//				anim.SetBool ("walk_dammit", true);
 			        //    arse = GameObject.Find("FizzFlip");
 			 //           transform.localScale=(-1,1,0);
-			flip ();
-			OnAnimatorIK();
+		//	flip ();
+		//	OnAnimatorIK();
 
-				} 
+			//	} 
+	//else
+		 if(Input.GetKeyDown(KeyCode.right){
+
+
+				testMove();
+		//	flip ();
+
+		}
+
+		 if(Input.GetKeyDown(KeyCode.left){
+			
+			
+			moveNoFlip();
+			//	flip ();
+			
+		}
+
 
 		else {
 						anim.SetBool ("walk_dammit", false);
+						anim.SetBool ("walk_left", false);
 				}
 	}
 
-	void flip(){
+	//void flip(){
 				// Switch the way the player is labelled as facing.
-				facingRight = !facingRight;
+			//	facingRight = !facingRight;
 	
 				// Multiply the player's x local scale by -1.
-				Vector3 theScale = arse.transform.localScale;
-				theScale.x *= -1;
-				transform.localScale = theScale;
-		     //   anim.SetIKRotation = -1;
-		}
+		//		Vector3 theScale = arse.transform.localScale;
+		//		theScale.x *= -1;
+			//	transform.localScale = theScale;
+		     //   
+	//	}
 	//number should be int layerindex
-	void OnAnimatorIK() {
-		float reach = anim.GetFloat("RightHandReach");
-		anim.SetIKPositionWeight(AvatarIKGoal.RightHand, reach);
-		anim.SetIKPosition(AvatarIKGoal.RightHand, objToPickUp.position);
+//	void OnAnimatorIK() {
+//		float reach = anim.GetFloat("RightHandReach");
+//		anim.SetIKPositionWeight(AvatarIKGoal.RightHand, reach);
+//		anim.SetIKPosition(AvatarIKGoal.RightHand, objToPickUp.position);
+//	}
+
+	void testMove(){
+		anim.SetBool("walk_dammit",true);
+	    Puppet2D_GlobalControl.flip = true; 
+
+			
+			
+//		    anim.SetIKRotation = -1;
+
+		}
+
+	void moveNoFlip(){
+		anim.SetBool("walk_left",true);
+		Puppet2D_GlobalControl.flip = false; 
+		
+		
+		
+		//		    anim.SetIKRotation = -1;
+		
 	}
+
 
 
 }
