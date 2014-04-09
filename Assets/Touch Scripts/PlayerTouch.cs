@@ -2,10 +2,13 @@
 using System.Collections;
 
 public class PlayerTouch : MonoBehaviour {
-	public Animator anim;
+	Animator anim;
 	public float speed = 0.1F;
 	KeyCode right;
 	KeyCode left;
+	public bool walking=false;
+	Transform curTransform;
+	GameObject hand;
 
 //	public GameObject arse; 
 	//public bool facingRight = true;	
@@ -15,12 +18,17 @@ public class PlayerTouch : MonoBehaviour {
 
 
 	void Start(){
-
+		anim = GetComponent<Animator>();
 //		arse = GameObject.Find("FizzFlip");
 //		objToPickUp = this.transform;
-		right = Input.GetKey (KeyCode.RightArrow);
-		left = Input.GetKey (KeyCode.LeftArrow);
-	  
+		//right = Input.GetKey (KeyCode.RightArrow);
+	//	left = Input.GetKey (KeyCode.LeftArrow);
+		walking = false;
+	//	curTransform = Fizz_Global_CTRL.GetComponent(localscale);
+		hand = GameObject.Find("Princess Fizz/Fizz_Global_CTRL");
+
+
+
 	
 
 
@@ -30,34 +38,42 @@ public class PlayerTouch : MonoBehaviour {
 
 	void Update() {
 	//	if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Moved) {
-		//				Vector2 touchDeltaPosition = Input.GetTouch (0).deltaPosition;
-		//				transform.Translate (-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
-		//				anim.SetBool ("walk_dammit", true);
+				//		Vector2 touchDeltaPosition = Input.GetTouch (0).deltaPosition;
+			//			transform.Translate (-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+		//			anim.SetBool ("walk_dammit", true);
 			        //    arse = GameObject.Find("FizzFlip");
 			 //           transform.localScale=(-1,1,0);
 		//	flip ();
 		//	OnAnimatorIK();
 
-			//	} 
+
 	//else
-		 if(Input.GetKeyDown(KeyCode.right){
-
-
-				testMove();
+		 if(Input.GetKey(KeyCode.UpArrow)) {
+	//		Debug.Log ("left presssed");
+//			Puppet2D_GlobalControl.flip = true; 
+		//	walking=true;
 		//	flip ();
+		//	hand.transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
+			anim.SetBool("walk_dammit",true);
+
 
 		}
 
-		 if(Input.GetKeyDown(KeyCode.left){
+		 else if(Input.GetKey(KeyCode.DownArrow)) {
 			
-			
-			moveNoFlip();
+		//	Debug.Log ("right pressed");
+		//	Puppet2D_GlobalControl.flip = false; 
+			hand.transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
+			anim.SetBool("walk_dammit",true);
+
+		//	testMove();
+		//	walking=true;
 			//	flip ();
 			
 		}
 
 
-		else {
+		else  {
 						anim.SetBool ("walk_dammit", false);
 						anim.SetBool ("walk_left", false);
 				}
@@ -81,25 +97,31 @@ public class PlayerTouch : MonoBehaviour {
 //	}
 
 	void testMove(){
-		anim.SetBool("walk_dammit",true);
-	    Puppet2D_GlobalControl.flip = true; 
-
-			
-			
+	//	Puppet2D_GlobalControl.flip = true; 
+	
+		Debug.Log ("testmove");
 //		    anim.SetIKRotation = -1;
 
 		}
 
-	void moveNoFlip(){
-		anim.SetBool("walk_left",true);
-		Puppet2D_GlobalControl.flip = false; 
+	void otherFunc(){
+
+
+		Debug.Log ("movenoflip");
 		
 		
 		
 		//		    anim.SetIKRotation = -1;
 		
 	}
+/* imported from global control
+ * 	public bool flip = false;
+ * 
+ * if(flip)
+				transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
 
+
+*/
 
 
 }
