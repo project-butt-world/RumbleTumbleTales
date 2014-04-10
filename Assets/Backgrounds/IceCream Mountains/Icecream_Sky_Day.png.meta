@@ -35,7 +35,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+<<<<<<< HEAD
   spritePixelsToUnits: 35
+=======
+  spritePixelsToUnits: 40
+>>>>>>> origin/Jack
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
