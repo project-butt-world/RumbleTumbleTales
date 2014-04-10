@@ -12,7 +12,7 @@ function Update(){
  
     transform.position.z = -165.883;
    // transform.position.y = target.position.y-distance;
-   transform.position.y = 34.67919;
+   transform.position.y = 43.50676;
     transform.position.x = target.position.x-distance;
  
 }
